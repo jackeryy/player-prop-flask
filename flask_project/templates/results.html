@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Prop Results</title>
+</head>
+<body>
+    <h2>Over Outcomes</h2>
+    <div class="outcomes">
+        {% for prop in over_list %}
+        <table class="prop-table">
+            <tr class="header">
+                <td colspan="2"><strong>Game:</strong> {{ prop['Game'] }} <strong>Player:</strong> {{ prop['Player Name'] }}</td>
+            </tr>
+            <tr>
+                <td><strong>Prop:</strong> {{ prop['Prop'] }}</td>
+                <td><strong>Line:</strong> {{ prop['Line'] }}</td>
+                <td><strong>Over ML:</strong> {{ prop['Over ML'] }}</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Last 10 Games:</strong> {{ prop['Over Count'] }}/10</td>
+            </tr>
+        </table>
+        {% endfor %}
+    </div>
+
+    <h2>Under Outcomes</h2>
+    <div class="outcomes">
+        {% for prop in under_list %}
+        <table class="prop-table">
+            <tr class="header">
+                <td colspan="2"><strong>Game:</strong> {{ prop['Game'] }} <strong>Player:</strong> {{ prop['Player Name'] }}</td>
+            </tr>
+            <tr>
+                <td><strong>Prop:</strong> {{ prop['Prop'] }}</td>
+                <td><strong>Line:</strong> {{ prop['Line'] }}</td>
+                <td><strong>Under ML:</strong> {{ prop['Under ML'] }}</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Last 10 Games:</strong> {{ prop['Under Count'] }}/10</td>
+            </tr>
+        </table>
+        {% endfor %}
+    </div>
+</body>
+</html>

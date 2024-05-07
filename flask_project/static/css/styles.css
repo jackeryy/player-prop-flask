@@ -1,0 +1,60 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #e8eff1; /* Light blue background for a soothing effect */
+}
+
+h2 {
+    color: #2c3e50; /* Dark blue for headers */
+    border-bottom: 2px solid #3498db; /* Add a colored line under headers */
+    padding-bottom: 10px;
+}
+
+.outcomes {
+    display: flex;
+    flex-direction: column;
+}
+
+.prop-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Slightly larger shadow for depth */
+}
+
+.prop-table .header td {
+    background-color: #3498db; /* Vibrant blue for header rows */
+    color: #ffffff; /* White text for contrast */
+    font-weight: bold;
+}
+
+.prop-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.prop-table td {
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #34495e; /* Darker text for readability */
+}
+
+/* Removes the bottom border from the last td */
+.prop-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Alternating row colors for improved readability */
+.prop-table tr:nth-child(even) {
+    background-color: #f0f7fa; /* Lighter blue for even rows */
+}
+
+@media (max-width: 600px) {
+    .outcomes {
+        flex-direction: column;
+    }
+
+    .prop-table {
+        margin-bottom: 10px;
+    }
+}
